@@ -1,0 +1,20 @@
+final time: 12
+Nc: 20
+algo: GDFP
+
+### GDFP ###
+step = 5
+puis step = 2*step à chaque utilisation de FP
+--> (step_k) = (5, 10, 20, 40, 80...)
+
+### fixed point ###
+`new` version
+tol = 0.
+
+### GD linesearch ###
+maxiter = 25
+δ1 = max(1., norm_Δu/(norm_dJ+1e-16))
+
+### convergence ###
+res = norm_Λ 
+ϵ = 1e-2

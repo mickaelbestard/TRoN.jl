@@ -1,0 +1,9 @@
+opt=test_Optimizer(final_time=12, Nc=20, itermax=100, u_init=0, algo="GD", CV_tol=1e-10, coef_reg=1e-3, coef_pen=1e-3);
+
+############# linesearch #############
+norm_Δu = l2_norm(opt.uk .- opt.ukm, opt.model.Δt_t)
+norm_dJ = l2_norm(opt.dJ, opt.model.Δt_t)
+
+descent_step = max(1.0, 1/(maximum(maximum(opt.dJ))+1e-12))
+decay_coef = 0.2 
+maxiter = 12

@@ -1,0 +1,13 @@
+Nmax = 8
+
+GD -----
+linesearch:
+maxiter = 30
+
+δ1 = max(1., norm_Δu/(norm_dJ+1e-16))
+decay rate = 0.7
+-----
+
+
+res = norm_Λ
+ϵ = 1e-2

@@ -1,0 +1,23 @@
+for algo \in ["GD", "FP", "GDFP"] 
+
+opt=test_Optimizer(final_time=12, Nc=10, itermax=100, CV_tol=1e-5, algo=algo, u_init=1, fp_tol=1e-10, delay_factor=2, fp_trigger=10);
+
+
+descent_step = 1
+decay_coef = 0.5 #9
+maxiter = 10
+
+J0 = ComputeCost!(opt, u=opt.uk)
+ukp_guess = proj.(opt.uk .- descent_step*opt.dJ)
+J1 = ComputeCost!(opt, u=ukp_guess)
+
+
+### linesearch 
+iter=0
+while J1 >= J0 && iter < maxiter 
+    descent_step *= decay_coef 
+    ukp_guess = proj.(opt.uk .- descent_step*opt.dJ)
+    no_control_lane!(opt, ukp_guess)
+    J1 = ComputeCost!(opt, u=ukp_guess)
+    iter += 1
+end

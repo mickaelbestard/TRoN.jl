@@ -1,0 +1,27 @@
+==== run infos ====
+ 
+==== optim infos ====
+final time: 5.0
+algorithm: GDFP
+Nmax: 2
+Staffing regularization (initial): 0.0
+BV regularization (initial): 0.0
+fp tol: 0.001
+fp trigger: 4
+fp trigger delay factor: 1.0
+total iterations: 22
+residual at last iteration: 8.801941757733677e-6
+ 
+==== model and mesh infos ====
+length of each road: 1.0
+number of primal cells (centers) per road: 50
+number of time steps: 501
+ 
+==== network infos ====
+number of roads: 4
+number of junctions: 5
+number of junctions that are leaves of the graph: 4
+location of leaves: [1, 2, 4, 5]
+density values at leaves of the graph: [0.66, 0.66, 0.0, 0.0]
+maximal velocities at roads: [1.0, 1.0, 1.0, 1.0]
+maximal densities at roads: [1.0, 1.0, 1.0, 1.0]

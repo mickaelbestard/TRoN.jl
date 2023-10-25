@@ -1,0 +1,2 @@
+opt=test_Optimizer(final_time=12, Nc=20, itermax=100, u_init=0, algo="FP", CV_tol=1e-10, coef_reg=1e-3, coef_pen=1e-3, fp_tol=1e-10);
+

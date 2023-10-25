@@ -1,0 +1,13 @@
+GDFP
+step = 10
+
+fixed point:
+tol = 0.
+
+linesearch:
+maxiter = 20
+δ1 = max(1., norm_Δu/(norm_dJ+1e-16))
+
+
+res = norm_Λ 
+ϵ = 1e-3

@@ -1,0 +1,5 @@
+fixed point:
+tol = 1e-16
+
+res = norm_Λ
+ϵ = 1e-2

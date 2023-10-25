@@ -1,0 +1,18 @@
+linesearch:
+if k < 50
+    maxiter = 30
+elseif k < 100
+    maxiter = 7
+elseif k < 200
+    maxiter = 10
+elseif k < 400
+    maxiter = 10
+else 
+    maxiter = 20
+end
+
+τ = 500
+a = 50
+
+res = norm_Λ
+ϵ = 1e-3
